@@ -1,0 +1,24 @@
+{
+  "request": {
+    "method": "POST",
+    "url": "/login",
+    "bodyPatterns": [
+      {
+        "matchesJsonPath": "$.username"
+      },
+      {
+        "matchesJsonPath": "$.password"
+      }
+    ]
+  },
+  "response": {
+    "status": 200,
+    "body": "{ \"message\": \"Login successful\", \"userId\": \"{{randomValue type='UUID'}}\" }",
+    "headers": {
+      "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+      "Access-Control-Allow-Headers": "Content-Type, Authorization"
+    }
+  }
+}

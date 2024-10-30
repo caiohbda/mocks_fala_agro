@@ -24,7 +24,10 @@
     "status": 201,
     "body": "{ \"message\": \"User created successfully\", \"userId\": \"{{randomValue type='UUID'}}\", \"FullName\": \"{{jsonPath request.body '$.FullName'}}\", \"Username\": \"{{jsonPath request.body '$.Username'}}\", \"Email\": \"{{jsonPath request.body '$.Email'}}\", \"Image\": \"\", \"PhoneNumber\": \"{{jsonPath request.body '$.PhoneNumber'}}\", \"IsActive\": true }",
     "headers": {
-      "Content-Type": "application/json"
+      "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+      "Access-Control-Allow-Headers": "Content-Type, Authorization"
     }
   }
 }
