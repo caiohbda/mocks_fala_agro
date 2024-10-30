@@ -1,0 +1,13 @@
+{
+  "request": {
+    "method": "DELETE",
+    "urlPattern": "/users/delete/[a-z0-9-]+"
+  },
+  "response": {
+    "status": 200,
+    "body": "{ \"message\": \"User deleted successfully\", \"userId\": \"{{request.path.[2]}}\" }",
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}
