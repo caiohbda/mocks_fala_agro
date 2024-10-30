@@ -1,0 +1,13 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPathPattern": "/users/(.*)"
+  },
+  "response": {
+    "status": 200,
+    "body": "{ \"id\": \"{{request.pathSegments.[2]}}\", \"FullName\": \"John Doe\", \"Username\": \"johndoe\", \"Email\": \"johndoe@example.com\", \"Image\": \"\", \"PhoneNumber\": \"1234567890\", \"IsActive\": true }",
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

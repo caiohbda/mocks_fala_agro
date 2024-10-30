@@ -1,7 +1,7 @@
 {
   "request": {
     "method": "PUT",
-    "urlPattern": "/users/upgrade/[a-z0-9-]+",
+    "urlPathPattern": "/users/upgrade/(.*)",
     "bodyPatterns": [
       {
         "matchesJsonPath": "$.FullName"
@@ -13,13 +13,13 @@
         "matchesJsonPath": "$.Email"
       },
       {
-        "matchesJsonPath": "$.IsActive"
+        "matchesJsonPath": "$.PhoneNumber"
       }
     ]
   },
   "response": {
     "status": 200,
-    "body": "{ \"message\": \"User updated successfully\", \"userId\": \"{{request.path.[2]}}\" }",
+    "body": "{ \"message\": \"User updated successfully\", \"userId\": \"{{request.pathSegments.[2]}}\" }",
     "headers": {
       "Content-Type": "application/json"
     }

@@ -1,0 +1,13 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPath": "/users"
+  },
+  "response": {
+    "status": 200,
+    "body": "[{\"id\": \"1\", \"FullName\": \"John Doe\", \"Username\": \"johndoe\", \"Email\": \"johndoe@example.com\", \"Image\": \"\", \"PhoneNumber\": \"1234567890\", \"IsActive\": true}, {\"id\": \"2\", \"FullName\": \"Jane Smith\", \"Username\": \"janesmith\", \"Email\": \"janesmith@example.com\", \"Image\": \"\", \"PhoneNumber\": \"0987654321\", \"IsActive\": true}]",
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}
