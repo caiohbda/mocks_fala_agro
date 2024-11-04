@@ -1,0 +1,22 @@
+{
+  "request": {
+    "method": "POST",
+    "url": "/login",
+    "bodyPatterns": [
+      {
+        "matchesJsonPath": "$[?(@.email != 'admin@email.com' || @.password != 'admin123')]"
+      }
+    ]
+  },
+  "response": {
+    "status": 401,
+    "jsonBody": {
+      "message": "Credenciais inválidas"
+    },
+    "headers": {
+      "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Headers": "Content-Type"
+    }
+  }
+}
